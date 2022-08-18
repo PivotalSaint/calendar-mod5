@@ -7,6 +7,7 @@
 
 # Deployed Links
 https://PivotalSaint.github.io/calendar-mod5/
+https://github.com/PivotalSaint/calendar-mod5
 
 # Acceptance Criteria
 //GIVEN I am using a daily planner to create a schedule
