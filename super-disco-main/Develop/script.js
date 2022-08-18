@@ -3,11 +3,9 @@
 // WHEN I open the planner??
 // THEN the current day is displayed at the top of the calendar
 // need to add in a time clock function for reference
-var hours= $("#hour")
+var hour= $("#hour")
 var currentTime = $("#currentDay");
-$("#currentDay").text(moment().format("MMMM Do YYYY hh:mm:ss A"));
-const moment= moment();
-console.log(moment)
+$("#currentDay").text(moment().format("MMMM Do YYYY HH:mm:ss A"));
 // WHEN I scroll down
 // THEN I am presented with time blocks for standard business hours
 // time blocks form 9-5
@@ -17,22 +15,24 @@ console.log(moment)
     // WHEN I view the time blocks for that day
     // THEN each time block is color-coded to indicate whether it is in the past, present, or future
     // use css styling of past present future
-
+var timeBlock = $("#row")
 function currentHour(){
-    for (var i=9; i<=17; i++){
-    if (currentTime().isBefore(currentHour)){
-        
-    }
-    if (currentTime().isAfter(currentHour)){
 
+    for (var i=9; i<=17; i++){
+    if (currentTime.isBefore(hour)){
+        $("#future")
     }
-    else (currentTime().isSameOrBefore(currentHour));
-};
+    if (currentTime.isAfter(hour)){
+        $("#past")
+    }
+    else (currentTime.isSameOrBefore(hour))
+        $("#present")
+    }
 };
 // WHEN I click into a time block
 // THEN I can enter an event
 // use button styling
-document.addEventListener("click", currentHour);
+document.addEventListener("click", currentTime);
 
 
 
